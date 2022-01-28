@@ -3,6 +3,15 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '3.0.1'
 
+# REST Introduction and Authentication, 1.26.22
+# Creating the API Server Application
+# Initial Setup
+# You will need some additional gems. Add the following to your Gemfile. These settings should be added before the group development, test section.
+gem 'devise'
+gem 'devise-jwt'
+gem 'rack-cors'
+
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails', branch: 'main'
 gem 'rails', '~> 6.1.3', '>= 6.1.3.2'
 # Use sqlite3 as the database for Active Record
