@@ -31,6 +31,15 @@ gem 'puma', '~> 5.0'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.4', require: false
 
+# 5.1.3 Adding Rspec and Swagger, 2.2.21
+# Setting Up for Rspec and Swagger
+# Add the following lines to your Gemfile:
+# First, in the section before the group :development, :test line, add these lines to get the swagger gem:
+gem 'rspec-rails'
+gem 'rexml'
+gem 'rswag'
+# The rswag line is to add the swagger gem
+
 # Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin AJAX possible
 # gem 'rack-cors'
 
@@ -47,3 +56,13 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+# Setting Up for Rspec and Swagger, 2.2.21
+# Add the following lines to your Gemfile:
+# add a group :test section to your Gemfile, near the bottom, which should look like:
+
+group :test do
+  gem 'factory_bot_rails'
+  gem 'faker'
+  gem 'rails-controller-testing'
+end
